@@ -1,0 +1,25 @@
+model: "fixie-ai/ultravox-v0_5-llama-3_1-8b"
+
+report_logs_to: ["wandb"]
+output_dir: "./output"
+
+eval_sets:
+  - name: covost2-en-de
+  - name: covost2-en-zh
+  - name: covost2-es-en
+  - name: covost2-zh-en
+  - name: librispeech-clean-transcription
+  - name: librispeech-other-transcription
+  - name: commonvoice-en-transcription
+  - name: commonvoice-es-transcription
+  - name: commonvoice-ru-transcription
+  - name: bigbenchaudio
+  - name: audiobench-cn-college-listen-mcq
+  - name: audiobench-dream-tts-mcq
+  - name: audiobench-slue-p2-sqa5
+  - name: audiobench-public-sg-speech-qa
+
+eval_dataset_args:
+  max_samples: 2000
+
+eval_batch_size: 60
